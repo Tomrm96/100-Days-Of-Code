@@ -1,7 +1,6 @@
 from turtle import Turtle, Screen
 import random
 
-
 race_on = False
 racers = []
 racing_turtle_colours = ['red', 'blue', 'green', 'yellow', 'purple', 'black']
@@ -12,7 +11,6 @@ screen.setup(width=500, height=400)
 
 user_bet = screen.textinput(title='Who will win the race?', prompt='Enter a turtle colour: ')
 
-
 for turtle in range(0,6):
     racer = Turtle(shape='turtle')
     racer.color(racing_turtle_colours[turtle])
@@ -20,10 +18,8 @@ for turtle in range(0,6):
     racer.goto(x= -230, y=y_positions[turtle])
     racers.append(racer)
 
-
 if user_bet:
     race_on = True
-
 
 while race_on:
     for racer in racers:
