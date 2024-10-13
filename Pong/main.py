@@ -20,14 +20,11 @@ screen.title('PONG')
 screen.tracer(False)
 screen.listen()
 
-
-
 screen.onkey(left_paddle.move_up, 'w')
 screen.onkey(left_paddle.move_down, 's')
 
 screen.onkey(right_paddle.move_up, 'Up')
 screen.onkey(right_paddle.move_down, 'Down')
-
 
 while game_ON:
 
@@ -35,10 +32,8 @@ while game_ON:
     ball.move()
     time.sleep(ball.ball_speed)
 
-
     if ball.ycor() >280 or ball.ycor() < -280:
         ball.bounce()
-
 
     if ball.distance(right_paddle) < 50 and ball.xcor() > 320 or ball.distance(left_paddle) < 50 and ball.xcor() < -320:
         ball.deflect()
